@@ -1,5 +1,5 @@
 {
-	"name": "eric-cli",
+	"name": "xiaowang-cli",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -7,7 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"eric-cli": "./bin/www"
+		"xiaowang-cli": "./bin/www"
 	},
 	"keywords": [],
 	"author": "",
