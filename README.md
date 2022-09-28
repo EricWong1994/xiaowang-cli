@@ -9,7 +9,7 @@
 
 bin目录下不要同时留有www文件和www.js文件，www优先级会更高
 
-
+1.0.0版本：
 当前版本执行`xiaowang-cli --help`
 ``` shell
 ➜  github xiaowang-cli --help 
@@ -19,3 +19,17 @@ Options:
   -V, --version  output the version number
   -h, --help     display help for command
 ```
+
+1.0.1版本：
+xiaowang-cli create my
+➜  xiaowang-cli git:(master) ✗ xiaowang-cli -h 
+Usage: xiaowang-cli [options] [command]
+Options:
+  -V, --version   output the version number
+  -h, --help      display help for command
+
+Commands:
+  create|c        创建一个项目
+  config|conf     config project variable
+  *               command not found
+  help [command]  display help for command
