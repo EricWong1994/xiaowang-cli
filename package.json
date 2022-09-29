@@ -16,6 +16,8 @@
 		"husky": "^8.0.1"
 	},
 	"dependencies": {
-		"commander": "^9.4.0"
+		"axios": "^0.27.2",
+		"commander": "^9.4.0",
+		"inquirer": "^9.1.2"
 	}
 }
