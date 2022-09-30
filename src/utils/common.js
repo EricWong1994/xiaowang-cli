@@ -46,9 +46,34 @@ const fetchReopLists = async () => {
   return data;
 };
 
+const { downloadDirectory } = require('./constants')
+const { promisify } = require('util');
+let downloadGit = require('download-git-repo');
+downloadGit = promisify(downloadGit);// 将项目下载到当前用户的临时文件夹下
+const downDir = async (repo, tag) => {
+  console.log(tag, 'downDir方法');
+  let project = `lxy-cli/${repo}`; //下载的项目
+  if (tag) {
+    project += `#${tag}`;
+  }
+  // /Users/你的用户名/.myTemplate
+  let dest = `${downloadDirectory}/${repo}`;
+  //把项目下载当对应的目录中
+  console.log(dest, 'dest的内容。。。。。。。。。。');
+  console.log(project, 'dest的内容。。。。。。。。。。');
+  try {
+    await downloadGit(project, dest);
+  } catch (error) {
+    console.log('错误了吗？？？\n');
+    console.log(error);
+  }
+  return dest;
+}
+
 module.exports = {
   mapActions,
   fnLoadingByOra,
   fetchReopLists,
-  getTagLists
+  getTagLists,
+  downDir
 };

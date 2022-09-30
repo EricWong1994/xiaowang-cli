@@ -15,8 +15,8 @@
 ➜  xiaowang-cli git:(master) ✗ xiaowang-cli create my
 create
 [
-  '/Users/wangshihao/.nvm/versions/node/v16.4.1/bin/node',
-  '/Users/wangshihao/.nvm/versions/node/v16.4.1/bin/xiaowang-cli',
+  '/Users/你的用户名/.nvm/versions/node/v16.4.1/bin/node',
+  '/Users/你的用户名/.nvm/versions/node/v16.4.1/bin/xiaowang-cli',
   'create',
   'my'
 ]
@@ -63,3 +63,19 @@ inquirer.prompt([
   pageSize: Number,
 }
 ```
+
+``
+➜  xiaowang-cli git:(master) npm i download-git-repo
+
+up to date, audited 250 packages in 35s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (2 moderate, 2 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details
+``

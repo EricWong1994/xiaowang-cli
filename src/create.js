@@ -1,5 +1,5 @@
 const inquirer = require('inquirer')
-const { fnLoadingByOra, fetchReopLists, getTagLists } = require('./utils/common');
+const { fnLoadingByOra, fetchReopLists, getTagLists, downDir } = require('./utils/common');
 
 
 module.exports = async (projectName) => {
@@ -26,4 +26,5 @@ module.exports = async (projectName) => {
   }]);
   console.log(`我现在选择了哪个仓库: ${repo}`);
   console.log(`我现在选择了哪个版本: ${tag}`);
+  const target = await fnLoadingByOra(downDir, '下载项目中...')(repo, tag);
 }
