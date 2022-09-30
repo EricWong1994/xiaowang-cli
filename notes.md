@@ -4,7 +4,8 @@
 - **chalk ：帮我们在控制台中画出各种各样的颜色**
 - **ora：小图标 （loading、succeed、warn等）**
 - **metalsmith ：读取所有文件，实现模板渲染**
-- **consolidate ：统一模板引擎**
+- **consolidate ：统一模板引擎 包括了常用的jade和ejs**
+- **ncp ：实现文件的拷贝功能**
 
 1）关于：process.argv ：想了解更多可以看相关链接：nodejs.cn/api/process…process.argv 属性返回一个数组，
 这个数组包含了启动Node.js进程时的命令行参数，
@@ -65,6 +66,7 @@ inquirer.prompt([
 ```
 
 ``
+### 报警1：
 ➜  xiaowang-cli git:(master) npm i download-git-repo
 
 up to date, audited 250 packages in 35s
@@ -79,3 +81,29 @@ To address all issues (including breaking changes), run:
 
 Run `npm audit` for details
 ``
+
+提交代码后github报警了：https://github.com/EricWong1994/xiaowang-cli/security/dependabot
+
+### 报警2：
+➜  xiaowang-cli git:(master) npm i ncp
+
+added 1 package, and audited 251 packages in 6s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (2 moderate, 2 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+### 3
+ Unhandled rejection Error: Cannot find module 'ejs'
+Require stack:
+- /Users/wangshihao/Desktop/github/xiaowang-cli/node_modules/consolidate/lib/consolidate.js
+- /Users/wangshihao/Desktop/github/xiaowang-cli/node_modules/consolidate/index.js
+- /Users/wangshihao/Desktop/github/xiaowang-cli/src/utils/common.js
+
+解决方法：	"ejs": "^3.0.1"

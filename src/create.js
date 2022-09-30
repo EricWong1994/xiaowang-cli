@@ -1,7 +1,8 @@
 const inquirer = require('inquirer')
-const { fnLoadingByOra, fetchReopLists, getTagLists, downDir } = require('./utils/common');
+const { fnLoadingByOra, fetchReopLists, getTagLists, downDir, copyTempToLoclhost } = require('./utils/common');
 
 
+// 输入xiaowang-cli c my则projectName为my
 module.exports = async (projectName) => {
   let repos = await fnLoadingByOra(fetchReopLists, '正在链接你的仓库...')();
   repos = repos.map((item) => item.name);
@@ -27,4 +28,6 @@ module.exports = async (projectName) => {
   console.log(`我现在选择了哪个仓库: ${repo}`);
   console.log(`我现在选择了哪个版本: ${tag}`);
   const target = await fnLoadingByOra(downDir, '下载项目中...')(repo, tag);
+  // target:  /Users/用户名/.myTemplate/vue-tempalte projectName为my
+  copyTempToLoclhost(target, projectName);
 }
