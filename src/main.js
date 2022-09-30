@@ -1,5 +1,5 @@
 const path = require('path')
-const { mapActions } = require('./utils/common');
+const { mapActions } = require('./utils/common.js');
 const program = require('commander');
 const { version } = require('./utils/constants');
 

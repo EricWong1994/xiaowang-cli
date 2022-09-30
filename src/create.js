@@ -1,5 +1,6 @@
 const axios = require('axios');
 const inquirer = require('inquirer')
+const { fnLoadingByOra } = require('./utils/common.js');
 
 // 1).获取仓库列表
 const fetchReopLists = async () => {
@@ -9,7 +10,7 @@ const fetchReopLists = async () => {
 };
 
 module.exports = async (projectName) => {
-  let repos = await fetchReopLists();
+  let repos = await fnLoadingByOra(fetchReopLists, '正在链接你的仓库...');
   repos = repos.map((item) => item.name);
   console.log(repos);
   console.log(`此处是文件${projectName}`);
