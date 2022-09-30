@@ -20,15 +20,15 @@ const mapActions = {
     alias: 'c', //别名
     description: '创建一个项目', // 描述
     examples: [ //用法
-      'lee-cli create <project-name>'
+      'xiaowang-cli create <project-name>'
     ]
   },
   config: { //配置文件
     alias: 'conf', //别名
     description: 'config project variable', // 描述
     examples: [ //用法
-      'lee-cli config set <k> <v>',
-      'lee-cli config get <k>'
+      'xiaowang-cli config set <k> <v>',
+      'xiaowang-cli config get <k>'
     ]
   },
   '*': {
