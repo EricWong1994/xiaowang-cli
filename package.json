@@ -1,6 +1,6 @@
 {
 	"name": "xiaowang-cli",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "",
 	"type": "commonjs",
 	"main": "index.js",
